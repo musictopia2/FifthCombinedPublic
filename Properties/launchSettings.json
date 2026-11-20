@@ -1,17 +1,26 @@
 {
   "$schema": "https://json.schemastore.org/launchsettings.json",
   "profiles": {
+    "pwa-localhost": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:5000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
     "lan-https": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "launchUrl": "https://musictopia.duckdns.org:19001",
-      "applicationUrl": "https://192.168.0.150:19001",
+      "applicationUrl": "$(StaticSiteLanApplicationUrl)",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "Kestrel__Certificates__Default__Path": "C:\\Users\\Andy\\AppData\\Local\\Posh-ACME\\LE_PROD\\4014212772\\musictopia.duckdns.org\\fullchain.cer",
-        "Kestrel__Certificates__Default__KeyPath": "C:\\Users\\Andy\\AppData\\Local\\Posh-ACME\\LE_PROD\\4014212772\\musictopia.duckdns.org\\cert.key"
-      }
+        "Kestrel__Certificates__Default__Path": "$(StaticSiteLanCertificatePath)",
+        "Kestrel__Certificates__Default__KeyPath": "$(StaticSiteLanKeyPath)"
+      },
+      "launchUrl": "$(StaticSiteLanLaunchUrl)"
     }
   }
 }
