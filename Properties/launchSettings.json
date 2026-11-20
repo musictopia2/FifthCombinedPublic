@@ -1,26 +1,17 @@
 {
   "$schema": "https://json.schemastore.org/launchsettings.json",
   "profiles": {
-    "pwa-localhost": {
-      "commandName": "Project",
-      "dotnetRunMessages": true,
-      "launchBrowser": true,
-      "applicationUrl": "http://localhost:5000",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
     "lan-https": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
+      "launchUrl": "$(StaticSiteLanLaunchUrl)",
       "applicationUrl": "$(StaticSiteLanApplicationUrl)",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "Kestrel__Certificates__Default__Path": "$(StaticSiteLanCertificatePath)",
         "Kestrel__Certificates__Default__KeyPath": "$(StaticSiteLanKeyPath)"
-      },
-      "launchUrl": "$(StaticSiteLanLaunchUrl)"
+      }
     }
   }
 }
